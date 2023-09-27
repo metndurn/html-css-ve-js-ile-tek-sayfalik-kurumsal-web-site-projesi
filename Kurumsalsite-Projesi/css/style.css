@@ -1,0 +1,384 @@
+/*general kodlama yani genel kodlamalar alani*/
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: #eee;
+}
+*::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+    border-radius: 5px;
+}
+:root {
+    --color: #5c9ef5; /* iki renk cesidi burda var biri sitede kullanılan renk(5c9ef5) digeri ise bu(f67c92)*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 24px;
+}
+p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #777;
+    text-align: justify;
+}
+a {
+    text-decoration: none;
+    color: #777;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+li {
+    list-style-type: none;
+}
+form {
+    max-width: 100%;
+    margin: 30px 0;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 2px solid var(--color);
+    box-shadow: none;
+    border-radius: 5px;
+}
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--color);
+}
+
+/*general class yani genel classların kullanımalanlarını tanımlayacagız*/
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-rigth {
+    text-align: right !important;
+}
+.circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 15px 0;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+.line {
+    line-height: 8px;
+}
+.line-1, .line-2, .line-3{
+    display: inline-block;
+    background-color: var(--color);
+}
+.line-1 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.line-2 {
+    width: 80px;
+    height: 1px;
+}
+.line-3 {
+    width: 60px;
+    height: 1px;
+}
+.btn {
+    padding: 15px 35px;
+    outline: none;
+    border: 2px solid var(--color);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 1s;
+}
+.btn:hover {
+    background-color: var(--color);
+}
+
+/*********** header alani ***********/
+
+#header {
+    height: 80vh;
+    background: url(../img/background.png) center right/contain no-repeat;
+}
+.logo {
+    width: 200px;
+    margin-top: 30px;
+}
+.header-contact {
+    max-width: 400px;
+    margin-top: 150px;
+}
+.read-more {
+    margin: 20px 0 30px 0;
+}
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background-color: var(--color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#sideNav ul li {
+    margin: 30px;
+}
+#sideNav ul li:first-child {
+    margin-top: 45px;
+}
+#sideNav ul li a {
+    color: #fff;
+}
+#menuBtn {
+    background-color: var(--color);
+    width: 50px;
+    position: fixed;
+    right: 40px;
+    top: 35px;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* about us and offer hakkımda alanları */
+#aboutUs, #offer {
+    padding: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.about-left, .about-rigth {
+    flex-basis: 50%;
+}
+.about-left img {
+    border-radius: 50px;
+}
+.about-contact {
+    max-width: 400px;
+    display: inline-block;
+}
+.about-contact h2 {
+    font-size: 18px;
+    margin: 50px 0 10px;
+    font-style: italic;
+}
+.about-contact h3 {
+    font-size: 20px;
+    font-style: italic;
+    color: #757575;
+}
+#offer .btn {
+    margin: 30px 0;
+}
+/* features alanı */
+
+#features {
+    padding: 70px 0;
+}
+.features-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+.features-col {
+    flex-basis: 25%;
+    text-align: center;
+}
+.features-col img {
+    width: 100px;
+}
+.features-col h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.features-col p {
+    text-align: center;
+}
+.features-btn {
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.features-btn .line {
+    text-align: right;
+    margin-right: 25px;
+}
+
+/* courses and contact */
+
+#course, #contact {
+    padding: 70px 0;
+}
+.course-row, .contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.course-left, .course-rigth, .contact-left, .contact-rigth  {
+    flex-basis: 50%;
+}
+.course-contact {
+    max-width: 400px;
+}
+.course-contact .btn {
+    margin: 30px 0;
+}
+
+/* contact alani */
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-box .btn {
+    flex-basis: 48%;
+}
+
+/* footer alanı */
+
+#footer {
+    margin: 30px 0;
+}
+.footer-row, .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-left {
+    flex-basis: 25%;
+}
+.footer-rigth {
+    flex-basis: 75%;
+    margin-top: 50px;
+}
+.link-title h4 {
+    margin-bottom: 15px;
+    color: var(--color);
+}
+.copyrigth img {
+    display: block;
+    width: 200px;
+    margin: 40px 0;
+}
+.copyrigth small, .link-title small {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* social icons yani sosyal ikonlar alani */
+
+.social-icon {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    z-index: 1;
+}
+.social-icon a {
+    display: block;
+    margin: 0 0 20px 25px;
+    cursor: pointer;
+    font-size: 35px;
+}
+.social-icon a:hover {
+    transform: scale(1.6);
+}
+
+/* responsive alani */
+
+@media only screen and ( max-width: 700px ) {
+
+    /* genel kodlamalar site icindeki birbirine benzeyen kodlardır */
+
+    h1 {
+        font-size: 22px;
+    }
+    .btn {
+        padding: 10px 16px;
+    }
+    .container {
+        margin: 0px 45px;
+    }
+
+    /* header alani */
+
+    #header {
+        height: 75vh;
+        background: none;
+    }
+    .logo {
+        width: 175px;
+            margin-top: 25px;
+    }
+    #sideNav {
+        max-width: 200px;
+    }
+    #menuBtn {
+        width: 40px;
+        right: 25px;
+    }
+
+    /* about us alani */
+
+    .about-left, .about-rigth{
+        flex-basis: 100%;
+    }
+    .about-contact{
+        margin: 50px 20px 0;
+    }
+
+    /* features, course, contact and offer. */
+
+    .features-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    .course-left, .contact-rigth,
+    .contact-left, .contact-rigth,
+    .footer-left, .footer-rigth {
+        flex-basis: 100%;
+    }
+
+    .contact-left, .course-rigth {
+        margin-top: 75px;
+    }
+    .link-title {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+    /* social icons */
+}
